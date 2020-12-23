@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -7,19 +7,17 @@
 //
 // Generated from the TEXTINCLUDE 2 resource.
 //
-#include "windows.h"
+#include "afxres.h"
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -27,18 +25,18 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -52,17 +50,28 @@ END
 // Menu
 //
 
-ID_MAIN_MENU MENU DISCARDABLE 
+ID_MAIN_MENU MENU
 BEGIN
-    POPUP "File"
+    POPUP "Quit"
     BEGIN
-        MENUITEM "&Load Image",                 ID_FILE_LOAD
         MENUITEM SEPARATOR
         MENUITEM "&Quit",                       ID_FILE_QUIT
     END
-    POPUP "Display"
+    POPUP "Calculator"
     BEGIN
-        MENUITEM "Show pixel coordinates",      ID_SHOWPIXELCOORDS
+        POPUP "XP Needed"
+        BEGIN
+            POPUP "Set Goal"
+            BEGIN
+                MENUITEM "Experience",                  ID_GOAL_EXPERIENCE
+                MENUITEM "Level",                       ID_GOAL_LEVEL
+            END
+        END
+        POPUP "Actions Needed"
+        BEGIN
+            MENUITEM "Select Skill",                ID_ACTIONSNEEDED_SELECTSKILL
+            MENUITEM "Calculate Number of Actions", ID_ACTIONSNEEDED_CALCULATEN
+        END
     END
 END
 
@@ -74,8 +83,9 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-ID_PLUS_ICON            ICON    DISCARDABLE     "icon1.ico"
-#endif    // English (U.S.) resources
+ID_PLUS_ICON            ICON                    "icon1.ico"
+
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

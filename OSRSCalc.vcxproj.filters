@@ -29,6 +29,9 @@
     <Image Include="src\rslogo.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="src\runescape_oldschool_logo.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\interface.rc">

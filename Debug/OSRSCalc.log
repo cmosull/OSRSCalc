@@ -1,12 +1,11 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   main.c
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(65,11): warning C4101: 'hMenu': unreferenced local variable
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(66,10): warning C4101: 'hDC': unreferenced local variable
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(141,44): warning C4047: 'function': 'LPSTR' differs in levels of indirection from 'LPTSTR [500]'
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(141,35): warning C4024: 'GetCurrentDirectoryA': different types for formal and actual parameter 2
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(142,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(142,19): warning C4047: 'function': 'char *' differs in levels of indirection from 'LPTSTR [500]'
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(142,10): warning C4024: 'strcat': different types for formal and actual parameter 1
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(143,50): warning C4047: 'function': 'LPCSTR' differs in levels of indirection from 'LPTSTR [500]'
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(143,41): warning C4024: 'LoadImageA': different types for formal and actual parameter 2
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(69,10): warning C4101: 'hDC': unreferenced local variable
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(146,51): warning C4047: 'function': 'LPSTR' differs in levels of indirection from 'LPSTR [500]'
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(146,35): warning C4024: 'GetCurrentDirectoryA': different types for formal and actual parameter 2
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(147,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(147,26): warning C4047: 'function': 'char *' differs in levels of indirection from 'LPSTR [500]'
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(147,10): warning C4024: 'strcat': different types for formal and actual parameter 1
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(148,61): warning C4047: 'function': 'LPCSTR' differs in levels of indirection from 'LPSTR [500]'
+C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\src\main.c(148,45): warning C4024: 'LoadImageA': different types for formal and actual parameter 2
   OSRSCalc.vcxproj -> C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\bin\OSRSCalc.exe

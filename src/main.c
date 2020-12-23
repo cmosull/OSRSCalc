@@ -47,6 +47,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	InvalidateRect(hWnd, NULL, TRUE);
 	UpdateWindow(hWnd);
 
+	ShowXPNeededExp = 0;
+	ShowXPNeededLevel = 0;
+
 	while (GetMessage(&msg, NULL, 0, 0))
 	{
 		TranslateMessage(&msg);
@@ -68,17 +71,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg,
 	switch (uMsg)
 	{
 	case WM_CREATE:
-		LoadImages();
-		AddControls(hWnd,WINWIDTH,WINHEIGHT);
+		LoadInitialImages();
+		AddInitialControls(hWnd,WINWIDTH,WINHEIGHT);
 		break;
 	case WM_COMMAND:
 		switch (LOWORD(wParam))
 		{
-		case ID_SHOWPIXELCOORDS:
+		case ID_GOAL_EXPERIENCE:
+			ShowXPNeededExp = (ShowXPNeededExp + 1) % 2;
 			break;
-		case ID_FILE_LOAD:
+		case ID_GOAL_LEVEL:
 			break;
-
 		case ID_FILE_QUIT:
 			DestroyWindow(hWnd);
 			break;
@@ -87,8 +90,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg,
 	case WM_SIZE: /* could be used to detect when window size changes */
 		NewWidth = LOWORD(lParam);
 		NewHeight = HIWORD(lParam);
-		LoadImages();
-		AddControls(hWnd,NewWidth,NewHeight);
+		LoadInitialImages();
+		AddInitialControls(hWnd, NewWidth, NewHeight);
 		return(DefWindowProc(hWnd, uMsg, wParam, lParam));
 		break;
 	case WM_PAINT:
@@ -119,35 +122,46 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg,
 		break;
 	}
 
-	/*hMenu = GetMenu(MainWnd);
-	if (ShowPixelCoords == 1)
-		CheckMenuItem(hMenu, ID_SHOWPIXELCOORDS, MF_CHECKED);
-	else
-		CheckMenuItem(hMenu, ID_SHOWPIXELCOORDS, MF_UNCHECKED);*/
+	hMenu = GetMenu(MainWnd);
+	if (ShowXPNeededExp == 1) {
+		CheckMenuItem(hMenu, ID_GOAL_EXPERIENCE, MF_CHECKED);
+	}
+	else {
+		CheckMenuItem(hMenu, ID_GOAL_EXPERIENCE, MF_UNCHECKED);
+	}
 
 	DrawMenuBar(hWnd);
 
 	return(0L);
 }
 
-void AddControls(HWND hWnd, int width, int height) {
+void AddInitialControls(HWND hWnd, int width, int height) {
 
-	hLogo = CreateWindow("Static", NULL, WS_VISIBLE | WS_CHILD | SS_BITMAP | SS_REALSIZECONTROL, CW_USEDEFAULT, 0, width, height, hWnd, NULL, NULL, NULL);
-	SendMessage(hLogo, STM_SETIMAGE, IMAGE_BITMAP,(LPARAM) hLogoImage);
+	hMainLogo = CreateWindow("Static", NULL, WS_VISIBLE | WS_CHILD | SS_BITMAP | SS_REALSIZECONTROL, CW_USEDEFAULT, 0, width, height, hWnd, NULL, NULL, NULL);
+	SendMessage(hMainLogo, STM_SETIMAGE, IMAGE_BITMAP,(LPARAM) hMainLogoImage);
 }
 
-void LoadImages() {
+void LoadInitialImages() {
 	if (IsDebuggerPresent()) {
-		GetCurrentDirectory(MAXBUFFLEN, Directory);
-		strcat(Directory, "\\src\\rslogo.bmp");
-		hLogoImage = (HBITMAP)LoadImage(NULL, Directory, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+		GetCurrentDirectory(MAXBUFFLEN, InitialDirectory);
+		strcat(InitialDirectory, "\\src\\runescape_oldschool_logo.bmp");
+		hMainLogoImage = (HBITMAP)LoadImage(NULL, InitialDirectory, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	}
 	else {
-		hLogoImage = (HBITMAP)LoadImage(NULL, "..\\src\\rslogo.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+		hMainLogoImage = (HBITMAP)LoadImage(NULL, "..\\src\\runescape_oldschool_logo.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
 	}
 	
 }
 
+void AddXPNeededControls(HWND hWnd, int width, int height) {
+	
+
+
+}
+
+void LoadXPNeededImages() {
+
+}
 
 
 

@@ -25,6 +25,7 @@
   <ItemGroup>
     <Image Include="src\icon1.ico" />
     <Image Include="src\rslogo.bmp" />
+    <Image Include="src\runescape_oldschool_logo.bmp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="src\interface.rc" />

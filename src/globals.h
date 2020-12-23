@@ -9,19 +9,24 @@
 
 #define MAXBUFFLEN 500
 
-HWND	MainWnd,hLogo;
-HBITMAP hLogoImage, hGenerateImage;
-LPTSTR Directory[MAXBUFFLEN];
+HWND	MainWnd,hMainLogo,hXPNeededImg;
+HBITMAP hMainLogoImage,hXPNeededImage;
+LPSTR InitialDirectory[MAXBUFFLEN];
 
 
 #define TIMER_SECOND	1			/* ID of timer used for animation */
 
-#define WINWIDTH 415
-#define WINHEIGHT 460
+#define WINWIDTH 510
+#define WINHEIGHT 531
 
 UINT NewWidth, NewHeight;
 
+int ShowXPNeededExp;
+int ShowXPNeededLevel;
+
 // Function prototypes
 LRESULT CALLBACK WndProc(HWND,UINT,WPARAM,LPARAM);
-void AddControls(HWND hWnd, int width, int height);
-void LoadImages();
+void AddInitialControls(HWND hWnd, int width, int height);
+void LoadInitialImages();
+void AddXPNeededControls(HWND hWnd, int width, int height);
+void LoadXPNeededImages();
