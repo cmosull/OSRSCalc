@@ -1,4 +1,2 @@
 C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\OSRSCalc\Debug\OSRSCalc.exe
 C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\OSRSCalc\Debug\OSRSCalc.pdb
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\Debug\OSRSCalc.exe
-C:\Users\cmosull\Documents\CPrograms\Personal\OSRSCalc\Debug\OSRSCalc.pdb

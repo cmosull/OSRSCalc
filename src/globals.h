@@ -7,9 +7,11 @@
 #define M_E 2.718282
 #endif
 
+#define MAXBUFFLEN 500
 
 HWND	MainWnd,hLogo;
 HBITMAP hLogoImage, hGenerateImage;
+LPTSTR Directory[MAXBUFFLEN];
 
 
 #define TIMER_SECOND	1			/* ID of timer used for animation */

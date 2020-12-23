@@ -137,8 +137,15 @@ void AddControls(HWND hWnd, int width, int height) {
 }
 
 void LoadImages() {
-
-	hLogoImage = (HBITMAP)LoadImage(NULL, "rslogo.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	if (IsDebuggerPresent()) {
+		GetCurrentDirectory(MAXBUFFLEN, Directory);
+		strcat(Directory, "\\src\\rslogo.bmp");
+		hLogoImage = (HBITMAP)LoadImage(NULL, Directory, IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	}
+	else {
+		hLogoImage = (HBITMAP)LoadImage(NULL, "..\\src\\rslogo.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+	}
+	
 }
 
 
